@@ -6,7 +6,7 @@
 #include <functional>
 
 class Node {
-  public:
+ public:
     char val;
     std::vector<std::shared_ptr<Node>> children;
 
@@ -14,7 +14,7 @@ class Node {
 };
 
 class PMTree {
-  public:
+ public:
     std::shared_ptr<Node> root;
     explicit PMTree(const std::vector<char>& elements);
 };
