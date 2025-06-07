@@ -4,11 +4,12 @@
 #include <random>
 #include <algorithm>
 #include <numeric>
+#include <vector>
 #include "tree.h"
 using namespace std;
 
 int main() {
-   cout << "n\tgetAllPerms(ms)\tgetPerm1(ms)\tgetPerm2(ms)" << endl;
+    cout << "n\tgetAllPerms(ms)\tgetPerm1(ms)\tgetPerm2(ms)" << endl;
 
  for (int n = 2; n <= 10; ++n) {
      vector<char> input(n);
