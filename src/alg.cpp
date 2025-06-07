@@ -30,8 +30,8 @@ PMTree::PMTree(const std::vector<char>& elements) {
     build(root, elements);
 }
 
-void collectPerms(std::shared_ptr<Node> node, 
-std::vector<char>& path, 
+void collectPerms(std::shared_ptr<Node> node,
+std::vector<char>& path,
 std::vector<std::vector<char>>& result) {
     if (node->val != '\0') path.push_back(node->val);
 
