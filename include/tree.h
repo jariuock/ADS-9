@@ -6,17 +6,17 @@
 #include <functional>
 
 class Node {
-public:
+  public:
     char val;
     std::vector<std::shared_ptr<Node>> children;
 
-    Node(char val) : val(val) {}
+    explicit Node(char val) : val(val) {}
 };
 
 class PMTree {
-public:
+  public:
     std::shared_ptr<Node> root;
-    PMTree(const std::vector<char>& elements);
+    explicit PMTree(const std::vector<char>& elements);
 };
 
 std::vector<std::vector<char>> getAllPerms(PMTree& tree);
