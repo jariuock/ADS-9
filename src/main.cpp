@@ -43,7 +43,8 @@ int main() {
     t2 = std::chrono::high_resolution_clock::now();
     double t_p2 = std::chrono::duration<double, std::milli>(t2 - t1).count();
 
-    std::cout << n << "\t" << t_all << "\t\t" << t_p1 << "\t\t" << t_p2 << std::endl;
+    std::cout << n << "\t" << t_all << "\t\t"
+      << t_p1 << "\t\t" << t_p2 << std::endl;
   }
   return 0;
 }
