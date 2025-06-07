@@ -5,6 +5,8 @@
 #include  <cstdlib>
 #include <algorithm>
 #include <stdexcept>
+#include <memory>
+#include <vector>
 #include  "tree.h"
 
 PMTree::PMTree(const std::vector<char>& elements) {
@@ -28,13 +30,14 @@ PMTree::PMTree(const std::vector<char>& elements) {
     build(root, elements);
 }
 
-void collectPerms(std::shared_ptr<Node> node, std::vector<char>& path, std::vector<std::vector<char>>& result) {
+void collectPerms(std::shared_ptr<Node> node, 
+std::vector<char>& path, 
+std::vector<std::vector<char>>& result) {
     if (node->val != '\0') path.push_back(node->val);
 
     if (node->children.empty()) {
         result.push_back(path);
-    }
-    else {
+    } else {
         for (auto& child : node->children) {
             collectPerms(child, path, result);
         }
